@@ -1,2 +1,2 @@
-# Web-Designing-workshop---2
+# Web-Designing-workshop-2
 javascript and react
