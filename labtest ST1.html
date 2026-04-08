@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+<body>
+    <h1>Vowel Consonant Checker</h1>
+    <input type="text" id="charInput" maxlength="1" placeholder="Enter a character">
+    <button onclick="checkChar()">Check</button>
+    <p id="result"></p>
+    <script>
+        function checkChar(){
+            let char=document.getElementById("charInput").value;
+            let resultDisplay=document.getElementById("result");
+            if(char=='a' || char=='e' || char=='i' || char=='o' || char=='u' ||
+               char=='A' || char=='E' || char=='I' || char=='O' || char=='U'){
+                resultDisplay.innerHTML=char + " is a vowel.";
+            }
+            else if((char>='a' && char<='z') || (char>='A' && char<='Z')){
+                resultDisplay.innerHTML=char + " is a consonant.";
+            }
+            else{
+                resultDisplay.innerHTML="Please enter a valid alphabet character.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Menu Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Minecraftia', sans-serif; 
+    background-color: #000;
+    color: white;
+    overflow: hidden;
+}
+
+.menu-screen {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('trial_chamber_bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 400px;
+}
+
+.mc-button {
+    background: #4A4A4A;
+    border: 2px solid #000;
+    border-top-color: #8B8B8B;
+    border-left-color: #8B8B8B;
+    color: #E0E0E0;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px #000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hover state changes the border and background color */
+.mc-button:hover {
+    background: #7E7E7E;
+    border: 2px solid #000;
+    border-top-color: #AFAFAF;
+    border-left-color: #AFAFAF;
+    color: #FFFFA0; /* Classic yellow hover text */
+}
+
+.button-row {
+    display: flex;
+    gap: 4px;
+}
+
+.mc-button.half {
+    flex: 1;
+}
+</style>
+<body>
+    <div class="menu-screen">
+        <div class="logo-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXK8RZnN7JU9oN8loT0xdUVFCe54PRR4TZqw&s" class="logo">
+            <span class="splash-text">The cutest predator you'll ever meet!</span>
+        </div>
+
+        <div class="button-container">
+            <button class="mc-button">Singleplayer</button>
+            <button class="mc-button">Multiplayer</button>
+            <button class="mc-button">Minecraft Realms</button>
+
+            <div class="button-row">
+                <button class="mc-button half">Options...</button>
+                <button class="mc-button half">Quit Game</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-left">Minecraft 1.21.1 (Modded)</div>
+            <div class="footer-right">Copyright Mojang AB. Do not distribute!</div>
+        </div>
+    </div>
+</body>
+</html>
